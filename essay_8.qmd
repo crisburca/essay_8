@@ -9,6 +9,7 @@ library(tidyverse)
 #library(rstanarm)
 ```
 
+
 ```{r}
 set.seed(301)
 generate_data <- function(i = 1000) {
