@@ -1,0 +1,23 @@
+---
+format: pdf
+editor: visual
+---
+
+```{r}
+library(tidyverse)
+set.seed(123)
+n <- 100
+earth <- rnorm(n)
+fire <- rnorm(n)
+wind <- rnorm(n)
+water <- rnorm(n)
+
+
+heart <- 0.5*earth + 0.2*fire + 0.1*wind + 0.3*water + rnorm(n)
+
+df <- data.frame(earth, fire, wind, water, heart)
+
+model <- lm(heart ~ earth + fire + wind + water, data = df)
+
+summary(model)
+```
